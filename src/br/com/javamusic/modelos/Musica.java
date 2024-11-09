@@ -1,4 +1,4 @@
-package br.com.javamusic;
+package br.com.javamusic.modelos;
 
 
 public class Musica extends Audio {
@@ -28,5 +28,14 @@ public class Musica extends Audio {
 
     public void setArtista(String artista) {
         this.artista = artista;
+    }
+
+    @Override
+    public int getClassificacao() {
+        if (this.getTotalReproducoes() > 5000) {
+            return 10;
+        } else {
+            return 6;
+        }
     }
 }
